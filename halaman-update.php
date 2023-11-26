@@ -11,6 +11,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
 
+    <style>
+        .btn {
+            transition: box-shadow 0.3s;
+        }
+
+        .b1:hover {
+            box-shadow: 0 0 10px green;
+        }
+    </style>
+
 <!-- Get Data -->
 <?php
 
@@ -30,7 +40,7 @@ $data = mysqli_fetch_array($sql);
                     <input type="text" value="<?php echo $data['list'] ?>" name="list" class="form-control shadow">
                 </div>
                 <div class="col-2">
-                    <button class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="b1 btn btn-success"><i class="fa-solid fa-pen-to-square"></i></button>
                     <input type="hidden" name="id" value="<?php echo $data['Id'] ?>">
                 </div>
             </div>
